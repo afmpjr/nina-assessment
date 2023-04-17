@@ -1,6 +1,4 @@
-/home/dev/projects/nina.care/README.md
-
-# Laravel Application with User and Previous Experiences
+# Assessment: Laravel Application with User and Previous Experiences
 
 This is a Laravel application built for listing and filtering users (aka babysitters and au pairs).
 
@@ -13,7 +11,7 @@ This is a Laravel application built for listing and filtering users (aka babysit
 
 ## Features
 
-- Retrieve all users and filter by name, age, location, and language proficiencies.
+- Retrieve all users and filter by 'name', 'age', 'location', 'personality', 'religion', 'language', 'allergy' and/or 'dietary_wish'.
 - List all previous experiences of a user.
 
 
