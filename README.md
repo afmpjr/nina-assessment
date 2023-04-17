@@ -49,7 +49,7 @@ php artisan key:generate
 6. Run the migrations and seed the database:
 
 ```bash
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 ```
 
 7. Run the application server:
