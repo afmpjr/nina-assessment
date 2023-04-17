@@ -62,8 +62,11 @@ php artisan serve
 
 8. Access the API endpoints using a tool like Postman or your web browser.
 
-## API Endpoints
+## Endpoints
 
-- `GET /users`: Retrieve all users with pagination and filtering options.
-- `GET /users/{user_id}/previous-experiences`: Retrieve previous experiences of a user with pagination.
-- `POST /previous-experiences`: Add a new previous experience under a user.
+- `GET /users`: returns a list of all the users in the database.
+- `GET /users/search`: returns a list of users based on the search parameters provided in the query string.
+- `GET /users/{id}`: returns a single user based on the ID provided in the URL.
+- `GET /users/{id}/previous-experiences`: returns a list of all the previous experiences of the user specified by the ID provided in the URL.
+- `GET /previous-experiences`: returns a list of all the previous experiences in the database.
+- `GET /previous-experiences/{id}`: returns a single previous experience based on the ID provided in the URL.
