@@ -18,8 +18,8 @@ return new class extends Migration {
             $table->string('gender');
             $table->string('location');
             $table->string('religion')->nullable();
-            $table->string('personality')->nullable();
-            $table->string('dietary_wishes')->nullable();
+            $table->json('personalities')->nullable();
+            $table->json('dietary_wishes')->nullable();
             $table->json('allergies')->nullable();
             $table->json('language_proficiencies');
 

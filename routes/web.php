@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +15,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Please check README for instructions.';
+    return response()->json(['message' => 'Please check README for instructions.'], 200);
 });
+
+Route::fallback(function () {
+    return response()->json(['message' => 'Not Found'], 404);
+});
+
 
 // returns a list of all the users in the database.
 Route::get('/users', [UserController::class, 'index']);
@@ -27,10 +33,4 @@ Route::get('/users/search', [UserController::class, 'search']);
 Route::get('/users/{id}', [UserController::class, 'show']);
 
 // returns a list of all the previous experiences of the user specified by the ID provided in the URL.
-Route::get('/users/{id}/previous-experiences', [UserController::class, 'previousExperiences']);
-
-// returns a list of all the previous experiences in the database.
-Route::get('/previous-experiences', [PreviousExperienceController::class, 'index']);
-
-// returns a single previous experience based on the ID provided in the URL.
-Route::get('/previous-experiences/{id}', [PreviousExperienceController::class, 'show']);
+Route::get('/users/{id}/previous-experiences', [UserController::class, 'getPreviousExperiences']);

@@ -11,7 +11,7 @@ This is a Laravel application built for listing and filtering users (aka babysit
 
 ## Features
 
-- Retrieve all users and filter by 'name', 'age', 'location', 'personality', 'religion', 'language', 'allergy' and/or 'dietary_wish'.
+- Retrieve all users and filter by 'name', 'age', 'min_age', 'max_age', 'location', 'personality', 'religion', 'language', 'allergy' and/or 'dietary_wish'.
 - List all previous experiences of a user.
 
 
@@ -66,5 +66,3 @@ php artisan serve
 - `GET /users/search`: returns a list of users based on the search parameters provided in the query string.
 - `GET /users/{id}`: returns a single user based on the ID provided in the URL.
 - `GET /users/{id}/previous-experiences`: returns a list of all the previous experiences of the user specified by the ID provided in the URL.
-- `GET /previous-experiences`: returns a list of all the previous experiences in the database.
-- `GET /previous-experiences/{id}`: returns a single previous experience based on the ID provided in the URL.

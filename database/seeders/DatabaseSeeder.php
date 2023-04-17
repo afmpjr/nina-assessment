@@ -13,8 +13,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        PreviousExperience::factory()
+        User::factory()
             ->count(83)
+            ->has(PreviousExperience::factory()
+                ->count(rand(0, 3)))
             ->create();
     }
 }
